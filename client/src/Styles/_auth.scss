@@ -1,0 +1,55 @@
+.authContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__modal {
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        border: 1px solid black;
+        border-radius: 3px;
+
+        &__buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+            font-style: normal;
+            font-weight: 400;
+        }
+    }
+
+    &__modal h2 {
+        margin: auto;
+        padding: 20px;
+    }
+
+    &__modal form {
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+    }
+
+    &__modal input {
+        padding: 5px;
+        margin-top: 10px;
+    }
+
+    &__modal button {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        background-color: $blue;
+        color: white;
+        text-decoration: none;
+        padding: 13px 20px;
+        border-radius: 4px;
+        align-self: flex-end;
+
+        &:hover {
+            background: $blueDark;
+            transition: 0.3s all ease;
+            cursor: pointer;
+        }
+    }
+}

@@ -1,0 +1,85 @@
+body {
+    font-family: 'Bebas Neue', cursive;
+    color: $text;
+    font-size: 14px;
+}
+
+.container {
+    width: 100%;
+    margin: auto;
+}
+
+.logo {
+    font-style: normal;
+    font-size: 18px;
+    line-height: 18px;
+    font-weight: 800;
+    text-decoration: none;
+    color: black;
+
+    @media (max-width: $breakpoint480) {
+        margin-top: 19px;
+    }
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    max-width: 1080px;
+    padding: 16px;
+
+    @media (max-width: $breakpoint480) {
+        padding: 8px;
+    }
+}
+
+
+.nav {
+    list-style: none;
+    padding-left: 0;
+    display: flex;
+    align-items: center;
+
+    &__item {
+        margin-left: 50px;
+    }
+
+    &__link {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 14px;
+        color: $grey;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+        &:hover {
+            color: $blue;
+            transition: 0.3s all ease;
+
+            path {
+                fill: $blueDark
+            }
+        }
+
+    }
+
+    &__btn {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        background-color: $blue;
+        color: white;
+        text-decoration: none;
+        padding: 13px 20px;
+        border-radius: 4px;
+
+        &:hover {
+            background: $blueDark;
+            transition: 0.3s all ease;
+        }
+    }
+}

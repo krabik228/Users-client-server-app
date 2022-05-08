@@ -1,0 +1,60 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    @media (max-width: $breakpoint1200) {
+        max-width: 1200px;
+    }
+
+    @media (max-width: $breakpoint992) {
+        max-width: 992px;
+    }
+}
+
+
+.section__title {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 44px;
+    /* or 122% */
+    color: $text;
+    margin: 0;
+
+    @media (max-width: $breakpoint1200) {
+        max-width: 342px;
+    }
+
+    @media (max-width: $breakpoint992) {
+        font-size: 32px;
+        line-height: 120%;
+    }
+
+    @media (max-width: $breakpoint768) {
+        max-width: 100%;
+    }
+
+    @media (max-width: $breakpoint480) {
+        font-size: 26px;
+    }
+}
+
+.section__subtitle {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    /* or 171% */
+    color: $subTitle;
+    margin: 15px 0 0;
+
+    @media (max-width: $breakpoint768) {
+        max-width: 100%;
+    }
+
+    @media (max-width: $breakpoint480) {
+        padding-right: 30px;
+    }
+}
