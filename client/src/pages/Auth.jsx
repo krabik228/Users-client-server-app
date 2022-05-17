@@ -8,7 +8,7 @@ import { Context } from './../index';
 import { USERS_ROUTE } from './../utils/consts';
 
 const Auth = observer(() => {
-    const { user } = useContext(Context)
+    const { setIsAuth, setUser } = useContext(Context)
     const location = useLocation()
     const navigate = useNavigate()
     const isLogin = location.pathname === LOGIN_ROUTE
@@ -23,13 +23,13 @@ const Auth = observer(() => {
             } else {
                 data = await registration(email, password)
             }
-            user.setUser(user)
-            user.setIsAuth(true)
+            console.log(data)
+            setUser(data)
+            setIsAuth(true)
             navigate(USERS_ROUTE)
         } catch (e) {
             alert(e.response.data.message)
         }
-
     }
 
     return (

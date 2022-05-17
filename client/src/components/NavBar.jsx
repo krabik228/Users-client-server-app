@@ -6,12 +6,12 @@ import { observer } from 'mobx-react-lite';
 
 const NavBar = observer(() => {
     const [burgerActive, setBurgerActive] = useState(false)
-    const { user } = useContext(Context)
+    const { isAuth, setUser, setIsAuth } = useContext(Context)
     const navigate = useNavigate()
 
     const logOut = () => {
-        user.setUser({})
-        user.setIsAuth(false)
+        setUser({})
+        setIsAuth(false)
     }
 
     return (
@@ -30,7 +30,7 @@ const NavBar = observer(() => {
                     USERS
                 </Link>
                 <div className={burgerActive ? "main-header active" : "main-header"}>
-                    {user.isAuth ?
+                    {isAuth ?
                         <nav className={burgerActive ? "nav active" : "nav"}>
                             <button
                                 className='nav__btn'

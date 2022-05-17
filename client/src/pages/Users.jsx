@@ -6,14 +6,14 @@ import { Context } from '../index';
 import { fetchUsers } from '../http/userAPI';
 
 const Users = observer(() => {
-    const { user } = useContext(Context)
+    const { _users, setUsers } = useContext(Context)
     let selected
     useEffect(() => {
-        fetchUsers().then(data => user.setUsers(data))
+        fetchUsers().then(data => setUsers(data))
     }, [])
-    const shuffled = user._users.sort(() => 0.5 - Math.random());
+    const shuffled = _users.slice().sort(() => 0.5 - Math.random());
     selected = shuffled.slice(0, 5);
-    console.log(selected)
+
     return (
 
         <div className='usersContainer'>
